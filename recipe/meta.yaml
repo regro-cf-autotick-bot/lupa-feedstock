@@ -11,17 +11,17 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-build-isolation
-  skip: true  # [win]
+  skip: true
   number: 0
 
 requirements:
   build:
     - cmake
     - make
-    - {{ stdlib("c") }}
+    - {{ stdlib('c') }}
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - gcc
+    - {{ compiler('gcc') }}
   host:
     - python
     - cython
