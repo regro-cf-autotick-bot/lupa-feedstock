@@ -16,16 +16,18 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}
+    - cmake
+    - make
     - {{ stdlib("c") }}
-    - python
-    - cython
-    - lua
-    - luajit
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - gcc
   host:
     - python
     - cython
     - pip
+    - lua
+    - luajit
   run:
     - python
 
@@ -48,3 +50,4 @@ extra:
     - lincrosenbach
     - mv-per
     - brnomendes
+    - mediocretech
