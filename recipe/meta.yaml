@@ -20,7 +20,7 @@ requirements:
     - {{ stdlib('c') }}
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - gcc # [linux]
+    - gcc  # [linux]
   host:
     - python
     - cython
